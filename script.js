@@ -29,20 +29,21 @@ var getQuote = function() {
 });
 }
 
-// Image from API
-//var getImg = function() {
-//	const settings = {
-//		"async": true,
-//		"crossDomain": true,
-//		"url": 'https://app.zenserp.com/api/v2/search?apikey=ae8094e0-b004-11eb-8b94-7f064a312bc5&q=Corrie Ten boom&tbm=isch',
-//		"method": "GET"
-//	};
-//
-//$.ajax(settings).done(function(response) {
-//	console.log(response.image_results[0])
-//	$("#image").attr("src", response.image_results[0].thumbnail)
-//});
-//}
+// Image from API (DOESN'T WORK FOR NOW)
+var getImg = function() {
+	const settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": 'https://app.zenserp.com/api/v2/search?apikey=ae8094e0-b004-11eb-8b94-7f064a312bc5&q=Corrie Ten boom&tbm=isch',
+		"method": "GET"
+	};
+
+$.ajax(settings).done(function(response) {
+	console.log(response.image_results[0])
+	$("#image").attr("src", response.image_results[0].thumbnail)
+});
+}
+
 
 //Transition for quote text
 var text_effect = function() {
