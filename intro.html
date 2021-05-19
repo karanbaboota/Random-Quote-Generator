@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Random Quote Generator </title>
+	<!-- To ensure compatability with various devices !-->
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<meta name="viewport" content="width=device-width">
+	
+	<!--	Linking JS and JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src = "script.js"></script>
+	
+	<!--	Linking css file-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body id = "background">
+
+<div id = "heading">
+	<h1 id = "heading-text"> Random Quote Generator </h1>
+	</div>
+<div id = "quote-box">
+	<p id = "quote"> Click on the button to get a random quote!! </p>
+	<div class = "loader"> </div>
+	<p id = "author"> -Karan Baboota </p>
+  </div>
+	<img src = "#" id = "image" onerror = "hideImg()">
+	
+	<div id = "quote-button">
+		<button id = "press">  Random Quote  </button>
+	</div>
+	
+	<div id = "copy-button">
+		<button type="button" class="btn btn-default btn-lg" id = "copy" onclick = "copy()" title="Copy quote to clipboard"> <span class = "glyphicon glyphicon-copy"> </span> </button>
+	</div>
+
+</body>
+</html>
