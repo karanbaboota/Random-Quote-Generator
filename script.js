@@ -27,6 +27,13 @@ var getQuote = function() {
 	$("#author").html("- " + response.originator.name);
 	author_effect()
 });
+	
+	$.ajax(settings).fail(function(response) {
+		console.log("failed");
+		$(".loader").css("display", "none")
+		$("#quote").html('The API failed to retrieve the data :(');
+		$("#author").html("");
+	});
 }
 
 // Image from API (DOESN'T WORK FOR NOW)
@@ -38,10 +45,14 @@ var getImg = function() {
 		"method": "GET"
 	};
 
-$.ajax(settings).done(function(response) {
+	$.ajax(settings).done(function(response) {
 	console.log(response.image_results[0])
 	$("#image").attr("src", response.image_results[0].thumbnail)
 });
+	
+	$.ajax(settings).fail(function(response) {
+		console.log("Image loading failed");
+	});
 }
 
 
@@ -109,7 +120,7 @@ function copy() {
 $(document).ready(function() {
 	$("#press").click(function(){
 		getQuote();
-//		getImg();
+		getImg();
 		
 	});
 });
